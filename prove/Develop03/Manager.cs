@@ -1,5 +1,7 @@
+
 using System;
 using System.Collections.Generic;
+using System.IO; 
 
 public class Manager
 {
@@ -26,13 +28,31 @@ public class Manager
         Console.WriteLine("Entry saved!\n");
     }
 
-    public static void SaveJournal()
+    public static void SaveJournal(Journal myJournal)
     {
-
+        Console.WriteLine("Enter the name of the file you would like to save the journal to: ");
+        string filename = Console.ReadLine();
+        myJournal.SaveToFile(filename);
     }
 
-    public static void LoadJournal()
+    public static void LoadJournal(string filename)
     {
+        if (!File.Exists(filename))
+        {
+            Console.WriteLine("File not found! Make sure the file exists.");
+            return;
+        }
 
-    }
+        try
+        {
+            Console.WriteLine($"\n--- Loading Journal from {filename} ---");
+            string fileContent = File.ReadAllText(filename);
+            Console.WriteLine(fileContent);
+            Console.WriteLine("\n--- End of Journal ---");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading file: {ex.Message}");
+        }
+}
 }

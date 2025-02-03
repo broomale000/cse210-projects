@@ -1,5 +1,6 @@
-using System;
 
+using System;
+using System.Linq.Expressions;
 
 public class Journal
 {
@@ -18,9 +19,23 @@ public class Journal
         }
     }
 
-    public void SaveToFile()
+    public void SaveToFile(string filename)
     {
-        
+        try
+        {
+            using (StreamWriter outputFile = new StreamWriter(filename, append: true))
+            {
+                foreach (var entry in entries)
+                {
+                    outputFile.WriteLine($"Date: {entry.Date}\nPrompt: {entry.Prompt}\nResponse: {entry.Response}\n-----------------------------------------------");
+                }
+                Console.WriteLine($"Journal saved to {filename}.");
+            }
+        }
+        catch (Exception)
+        {
+            Console.WriteLine($"Error writing to {filename}.");
+        }
     }
 
     public void LoadFromFile()

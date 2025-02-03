@@ -22,10 +22,12 @@ class Program
                     myJournal.DisplayEntries();
                     break;
                 case "3":
-                    Console.WriteLine("Empty");
+                    Manager.SaveJournal(myJournal);
                     break;
                 case "4":
-                    Console.WriteLine("Empty");
+                    Console.WriteLine("Please input file name");
+                    string filename = Console.ReadLine();
+                    Manager.LoadJournal(filename);
                     break;
                 case "5":
                     Console.WriteLine("Exiting the program. Goodbye!");
