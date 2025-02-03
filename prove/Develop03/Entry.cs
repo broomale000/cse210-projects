@@ -7,7 +7,6 @@ public class Entry
 public string Date { get; set; }
 public string Prompt { get; set; }
 public string Response { get; set; }
-
 public Entry(string prompt, string response)
 {
     Date = DateTime.Now.ToString("yyyy-MM-dd");
@@ -17,7 +16,7 @@ public Entry(string prompt, string response)
 
     public override string ToString()
     {
-        return $"{Date} | {Prompt} | {Response}";
+        return $"Date: {Date}\nPrompt: {Prompt}\nResponse: {Response}\n-----------------------------------------------";
     }
 
 }

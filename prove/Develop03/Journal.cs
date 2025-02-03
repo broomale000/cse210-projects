@@ -14,7 +14,7 @@ public class Journal
     {
         foreach (var entry in entries)
         {
-            Console.WriteLine($"entry\n\n");
+            Console.WriteLine($"{entry}\n\n");
         }
     }
 

@@ -1,19 +1,8 @@
 
 using System;
-using System.ComponentModel;
 
 class Program
 {
-
-    static List<string> prompts = new List<string>()
-    {
-        "Who was the most interesting person I interacted with today?",
-        "What was the best part of my day?",
-        "How did I see the hand of the Lord in my life today?",
-        "What was the strongest emotion I felt today?",
-        "If I had one thing I could do over today, what would it be?"
-    };
-
     static Journal myJournal = new Journal();
 
     static void Main()
@@ -22,14 +11,15 @@ class Program
         {
             Menu.Display();
             string userSelect = Console.ReadLine();
+            Console.WriteLine();
 
             switch (userSelect)
             {
                 case "1":
-                    Manager.WriteNewEntry();
+                    Manager.WriteNewEntry(myJournal);
                     break;
                 case "2":
-                    Console.WriteLine("Empty");;
+                    myJournal.DisplayEntries();
                     break;
                 case "3":
                     Console.WriteLine("Empty");
