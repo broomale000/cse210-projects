@@ -37,22 +37,15 @@ public class Manager
 
     public static void LoadJournal(string filename)
     {
-        if (!File.Exists(filename))
-        {
-            Console.WriteLine("File not found! Make sure the file exists.");
-            return;
-        }
-
         try
         {
-            Console.WriteLine($"\n--- Loading Journal from {filename} ---");
+            Console.WriteLine($"\n--- {filename} Journal ---");
             string fileContent = File.ReadAllText(filename);
             Console.WriteLine(fileContent);
-            Console.WriteLine("\n--- End of Journal ---");
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            Console.WriteLine($"Error loading file: {ex.Message}");
+            Console.WriteLine($"Error loading file.");
         }
 }
 }
