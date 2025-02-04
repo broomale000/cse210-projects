@@ -45,7 +45,7 @@ public class Manager
         }
         catch (Exception)
         {
-            Console.WriteLine($"Error loading file.");
+            Console.WriteLine($"Error loading file. (try adding .txt)");
         }
 }
 }
