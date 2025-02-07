@@ -12,6 +12,7 @@ class Program
         Fraction number5 = new Fraction(3, 4);
         Fraction number6 = new Fraction(1, 3);
 
+        number.Display();
         number1.Display();
         number2.Display();
         number3.Display();
