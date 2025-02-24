@@ -3,19 +3,16 @@ using System;
 class Reference
 {
     private string text;
-    private int storage;
 
     public Reference()
     {
         text = "Moroni 6:8";
     }
 
-    public Reference(int number)
+    public Reference (string inputText)
     {
-        storage = number;
-        text = "Moroni 6:7-8";
+        text = inputText;
     }
-
 
     public void Display()
     {
