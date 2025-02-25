@@ -5,6 +5,9 @@ class Scripture
 {
     private string _text;
     private List<Word> _list = new List<Word>();
+    private int count = 3;
+    private Random RNG = new Random();
+    private HashSet<int> selectedIndexes = new HashSet<int>();
 
     public Scripture()
     {
@@ -15,6 +18,7 @@ class Scripture
     {
         _text = inputText;
     }
+
 
     public void ConvertTextToList()
     {
@@ -29,12 +33,22 @@ class Scripture
 
     public void Blank()
     {
-        Random RNG = new Random();
-
-        for (int i = 0; i < 3; i++)
+        if (selectedIndexes.Count != _list.Count)
         {
-            int range = RNG.Next(0, _list.Count);
-            _list[range].SetVisibility(false);
+            while (count != 0)
+            {
+                if (selectedIndexes.Count == _list.Count){
+                    break;
+                }
+                int range = RNG.Next(0, _list.Count);
+                if (!selectedIndexes.Contains(range))
+                {
+                    _list[range].SetVisibility(false);
+                    selectedIndexes.Add(range);
+                    count = count - 1;
+                }
+            }
+            count = 3;
         }
     }
 
