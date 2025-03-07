@@ -18,29 +18,28 @@ class Program
 
                 if (input == "1")
                 {
-                    Console.Clear();
-                    Console.WriteLine("One");
-                    Console.WriteLine("");
-                    Activity FirstActivity = new Activity();
-                    FirstActivity.GetReady(5);
-                }
-                else if (input == "2")
-                {
                     Breathing BreathingActivity = new Breathing();
                     BreathingActivity.BreathingIntro();
                     BreathingActivity.SetSessionDuration();
-                    BreathingActivity.GetReady(5);
-                    BreathingActivity.BreatheInOut();
+                    BreathingActivity.BreatheInOut();                  
+                }
+                else if (input == "2")
+                {
+                    Reflection ReflectionActivity = new Reflection();
+                    ReflectionActivity.ReflectionIntro();
+                    ReflectionActivity.SetSessionDuration();
+                    ReflectionActivity.ReflectIn();
                 }
                 else if (input == "3")
                 {
-                    Console.WriteLine("Three");
-                    Console.WriteLine("");
+                    Listing ListingActivity = new Listing();
+                    ListingActivity.ListingIntro();
+                    ListingActivity.SetSessionDuration();
+                    ListingActivity.ListOut();
                 }
                 else if (input == "4")
                 {
-                    Console.WriteLine("Four");
-                    Console.WriteLine("");
+                    Console.WriteLine("\nThank you for doing Mindfulness with us today!");
                     break;
                 }
                 else
@@ -48,6 +47,11 @@ class Program
                     Console.WriteLine("Error.");
                 }
         }
-        Console.WriteLine("\nThank you for doing Mindfulness with us today!");
+        
+                    // Console.Clear();
+                    // Console.WriteLine("One");
+                    // Console.WriteLine("");
+                    // Activity FirstActivity = new Activity();
+                    // FirstActivity.GetReady(5);
     }
 }
