@@ -3,16 +3,11 @@ class Reception : Event
     private string _message;
     public Reception(string type, string title, string description, string date, string time, string message, Address eventLocation) : base(type, title, description, date, time, eventLocation)
     {
-        _type = type;
-        _title = title;
-        _description = description;
-        _date = date;
-        _time = time;
         _message = message;
         _eventLocation = eventLocation;
     }
 
-    public override void FullDetails()
+    public override void PrintFullDetails()
     {
         Console.WriteLine("Full Details:");
         Console.WriteLine($"Event Title: {_title}");

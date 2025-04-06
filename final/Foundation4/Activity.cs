@@ -9,23 +9,23 @@ class Activity{
         _duration = duration;
     }
 
-    public virtual void CalculateSpeed() 
+    public virtual double ReturnSpeed() 
     {
-        Console.WriteLine("-");
+        return 0;
     }   
 
-    public virtual void CalculatePace()
+    public virtual double ReturnPace()
     {
-        Console.WriteLine("-");
+        return 0;
     }
 
-    public virtual void Distance()
+    public virtual double ReturnDistance()
     {
-        Console.WriteLine("-");
+        return 0;
     }
 
-    public virtual void GetSummary()
+    public virtual string GetSummary()
     {
-        Console.WriteLine("-");
+        return "0";
     }
 }

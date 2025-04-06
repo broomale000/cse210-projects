@@ -10,7 +10,7 @@ class Comment
         _comment = message;
     }
 
-    public void Display()
+    public void DisplayComment()
     {
         Console.WriteLine($"{_username} replied:\n{_comment}");
     }

@@ -14,7 +14,7 @@ class Product
         _quantity = quantity;
     }
 
-    public decimal CalculateCost()
+    public decimal ReturnCost()
     
     {
         return _price * _quantity;

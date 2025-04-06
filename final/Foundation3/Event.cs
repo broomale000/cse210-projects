@@ -17,7 +17,7 @@ class Event
         _eventLocation = eventLocation;
     }
 
-    public void StandardDetails()
+    public void PrintStandardDetails()
     {
         Console.WriteLine("Standard Details:");
         Console.WriteLine($"Event Title: {_title}");
@@ -27,7 +27,7 @@ class Event
         Console.WriteLine($"Event Location: {_eventLocation}");
     }
 
-    public void ShortDescription()
+    public void PrintShortDescription()
     {
         Console.WriteLine("Short Description:");
         Console.WriteLine($"Event Type: {_type}");
@@ -35,7 +35,7 @@ class Event
         Console.WriteLine($"Event Type: {_date}");
     }
 
-    public virtual void FullDetails()
+    public virtual void PrintFullDetails()
     {
         Console.WriteLine("Full Details");
         Console.WriteLine($"Event Title: {_title}");

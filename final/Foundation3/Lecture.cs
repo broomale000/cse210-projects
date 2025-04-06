@@ -5,17 +5,12 @@ class Lecture : Event
 
     public Lecture(string type, string title, string description, string date, string time, string speaker, int capacity, Address eventLocation) : base(type, title, description, date, time, eventLocation)
     {
-        _type = type;
-        _title = title;
-        _description = description;
-        _date = date;
-        _time = time;
         _speaker = speaker;
         _capacity = capacity;
         _eventLocation = eventLocation;
     }
 
-    public override void FullDetails()
+    public override void PrintFullDetails()
     {
         Console.WriteLine("Full Details:");
         Console.WriteLine($"Event Title: {_title}");

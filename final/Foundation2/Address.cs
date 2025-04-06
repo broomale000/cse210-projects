@@ -15,7 +15,7 @@ class Address
         _country = "";
     }
 
-    public string IsLocal()
+    public string ReturnIsLocalA()
     {
         if (_country == "United States")
             return "Yes";
@@ -23,7 +23,7 @@ class Address
             return "No";
     }
 
-    public string WriteAddress()
+    public string ReturnAddressA()
     {
         return $"Street: {_street}\nCity: {_city}\nState/Province: {_stateProvince}\nCountry: {_country}";
     }

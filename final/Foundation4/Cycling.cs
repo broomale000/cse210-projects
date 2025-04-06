@@ -11,23 +11,26 @@ class Cycling : Activity
     }
 
 
-    public override void CalculateSpeed()
+    public override double ReturnSpeed()
     {
-        Console.WriteLine($"Cycling Speed Is: {(_speed):F3} kilometers per hour");
+        return _speed;
+        // Console.WriteLine($"Cycling Speed Is: {(_speed):F3} kilometers per hour");
     }
 
-    public override void CalculatePace()
+    public override double ReturnPace()
     {
-        Console.WriteLine($"Cycling Pace is: {((_duration / (_speed * _duration)) * 60):F3} minutes per kilometer");
+        return (_duration / (_speed * _duration)) * 60;
+        // Console.WriteLine($"Cycling Pace is: {((_duration / (_speed * _duration)) * 60):F3} minutes per kilometer");
     }
 
-    public override void Distance()
+    public override double ReturnDistance()
     {
-        Console.WriteLine($"Cycling Distance is: {(_speed * _duration):F3} kilometers");
+        return _speed * _duration;
+        // Console.WriteLine($"Cycling Distance is: {(_speed * _duration):F3} kilometers");
     }
 
-    public override void GetSummary()
+    public override string GetSummary()
     {
-        Console.WriteLine($"{_date} Cycling ({_duration} min): Distance {(_speed * _duration):F3} km, Speed: {(_speed):F3} kph, Pace: {((_duration / (_speed * _duration)) * 60):F3} min per km");
+        return $"{_date} Cycling ({_duration} min): Distance {ReturnSpeed():F3} km, Speed: {ReturnSpeed():F3} kph, Pace: {ReturnPace():F3} min per km";
     }
 }

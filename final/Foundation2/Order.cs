@@ -4,7 +4,7 @@ class Order
 
     private Customer _Customer;
     List<Product> Products = new List<Product>();
-    decimal _total;
+    private decimal _total;
 
     public Order()
     {
@@ -12,16 +12,16 @@ class Order
         Products = new List<Product>();
     }
 
-    public void GetTotal()
+    public void PrintTotal()
     {
         foreach (Product product in Products)
         {
-            decimal cost = product.CalculateCost();
+            decimal cost = product.ReturnCost();
             product.PrintPriceAndQuantity();
             _total += cost;
             Console.WriteLine($"This is the subtotal: ${_total}");
         }        
-        if (_Customer.IsLocal() == "Yes")
+        if (_Customer.ReturnIsLocalC() == "Yes")
             {
                 _total += 5m;
                 Console.WriteLine("Non-Local Order - +$5");
@@ -52,23 +52,23 @@ class Order
     public string ReturnPackLabel()
     {
 
-            string address = _Customer.WriteAddress();
-            string customer = _Customer.WriteName();
+            string address = _Customer.ReturnAddressC();
+            string customer = _Customer.ReturnName();
 
             return $"Customer: {customer}\nAddress: {address}";
     }
 
-    public decimal FindShippingCost()
+    public decimal ReturnShippingCost()
     {
-        if (_Customer.IsLocal() == "Yes")
+        if (_Customer.ReturnIsLocalC() == "Yes")
             return 5m;
         else
             return 35m;
     }
 
-    public void AddCustomerName(string name)
+    public void SetCustomerName(string name)
     {
-        _Customer.AddName(name);
+        _Customer.SetName(name);
     }
 
     public void AppendProduct(Product product)
@@ -83,7 +83,7 @@ class Order
 
      public void DisplayAddress()
      {
-        Console.WriteLine(_Customer.WriteAddress());
+        Console.WriteLine(_Customer.ReturnAddressC());
      }
 
 }

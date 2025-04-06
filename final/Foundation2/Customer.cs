@@ -11,22 +11,22 @@ class Customer
         _Address = new Address("", "", "", ""); 
     }
 
-    public string IsLocal()
+    public string ReturnIsLocalC()
     {
-        return _Address.IsLocal();
+        return _Address.ReturnIsLocalA();
     }
 
-    public string WriteAddress()
+    public string ReturnAddressC()
     {
-        return _Address.WriteAddress();
+        return _Address.ReturnAddressA();
     }
 
-    public string WriteName()
+    public string ReturnName()
     {
        return _name;
     }
 
-    public void AddName(string name)
+    public void SetName(string name)
     {
         _name = name;
     }

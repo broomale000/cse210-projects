@@ -3,16 +3,11 @@ class Gathering : Event
     private string _forecast;
     public Gathering(string type, string title, string description, string date, string time, string forecast, Address eventLocation) : base(type, title, description, date, time, eventLocation)
     {
-        _type = type;
-        _title = title;
-        _description = description;
-        _date = date;
-        _time = time;
         _forecast = forecast;
         _eventLocation = eventLocation;
     }
 
-    public override void FullDetails()
+    public override void PrintFullDetails()
     {
         Console.WriteLine("Full Details:");
         Console.WriteLine($"Event Title: {_title}");

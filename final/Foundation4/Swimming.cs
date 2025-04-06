@@ -10,23 +10,26 @@ class Swimming : Activity
         _laps = laps;
     }
 
-    public override void CalculateSpeed()
+    public override double ReturnSpeed()
     {
-        Console.WriteLine($"Swimming Speed is: {((_laps * .05)/_duration):F3} kilometers per hour");
+        return (_laps * .05) / _duration * 60;
+        // Console.WriteLine($"Swimming Speed is: {((_laps * .05)/_duration):F3} kilometers per hour");
     }
 
-    public override void CalculatePace()
+    public override double ReturnPace()
     {
-        Console.WriteLine($"Swimming Pace is: {((_duration / (_laps * .05)) * 60):F3} minutes per kilometer");
+        return (_duration / (_laps * .05)) * 60;
+        // Console.WriteLine($"Swimming Pace is: {((_duration / (_laps * .05)) * 60):F3} minutes per kilometer");
     }
 
-    public override void Distance()
+    public override double ReturnDistance()
     {
-        Console.WriteLine($"Swimming Distance is: {(_laps * .05):F3} kilometers");
+        return _laps * .05;
+        // Console.WriteLine($"Swimming Distance is: {(_laps * .05):F3} kilometers");
     }
 
-    public override void GetSummary()
+    public override string GetSummary()
     {
-        Console.WriteLine($"{_date} Swimming ({_duration} min): Distance {((_laps * .05)):F3} km, Speed: {((_laps * .05) / _duration):F3} kph, Pace: {((_duration / (_laps * .05)) * 60):F3} min per km");
+        return $"{_date} Swimming ({_duration} min): Distance {ReturnDistance():F3} km, Speed: {ReturnSpeed():F3} kph, Pace: {ReturnPace():F3} min per km";
     }
 }

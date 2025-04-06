@@ -25,21 +25,15 @@ class Video
     {
         Console.WriteLine("-----------------------------------------");
         Console.WriteLine($"Title: {_title}\nAuthor: {_author}\nDate: {_date}\nLength: {_length} seconds");
-        CountComments();
+        Console.WriteLine($"Nummber of replies: " + Comments.Count);
         Console.WriteLine();
         
         foreach (Comment comment in Comments)
         {
-            comment.Display();
+            comment.DisplayComment();
             Console.WriteLine();
         }
         
         Console.WriteLine("-----------------------------------------");
     }
-
-    public void CountComments()
-    {
-        Console.WriteLine($"Nummber of replies: " + Comments.Count);
-    }
-
 }
