@@ -31,6 +31,6 @@ class Cycling : Activity
 
     public override string GetSummary()
     {
-        return $"{_date} Cycling ({_duration} min): Distance {ReturnSpeed():F3} km, Speed: {ReturnSpeed():F3} kph, Pace: {ReturnPace():F3} min per km";
+        return $"{_date} Cycling ({_duration} min): Distance {ReturnSpeed():F2} km, Speed: {ReturnSpeed():F2} kph, Pace: {ReturnPace():F2} min per km";
     }
 }

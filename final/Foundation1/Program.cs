@@ -12,13 +12,13 @@ class Program
         DogVid.AddComment(new Comment("Somebody123", "The worst vid!"));
         DogVid.AddComment(new Comment("WhyNot?", "What is the meaning of life?"));
 
-        CatVid.AddComment(new Comment("Joe Joe", "This vid is great!"));
-        CatVid.AddComment(new Comment("Somebody123", "The worst vid!"));
-        CatVid.AddComment(new Comment("WhyNot?", "What is the meaning of life?"));
+        CatVid.AddComment(new Comment("Billy", "This vid is great!"));
+        CatVid.AddComment(new Comment("Bob", "The worst vid!"));
+        CatVid.AddComment(new Comment("Jr.", "What is the meaning of life?"));
 
-        HorseVid.AddComment(new Comment("Joe Joe", "This vid is great!"));
-        HorseVid.AddComment(new Comment("Somebody123", "The worst vid!"));
-        HorseVid.AddComment(new Comment("WhyNot?", "What is the meaning of life?"));
+        HorseVid.AddComment(new Comment("Joe John", "This vid is great!"));
+        HorseVid.AddComment(new Comment("SomeNobody", "The worst vid!"));
+        HorseVid.AddComment(new Comment("BruhMan2000", "What is the meaning of life?"));
 
         DogVid.DisplayAll();
         CatVid.DisplayAll();

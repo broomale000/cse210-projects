@@ -12,10 +12,10 @@ class Reception : Event
         Console.WriteLine("Full Details:");
         Console.WriteLine($"Event Title: {_title}");
         Console.WriteLine($"Event Description: {_description}");
-        Console.WriteLine($"Event Type: {_date}");
+        Console.WriteLine($"Event Date: {_date}");
         Console.WriteLine($"Event Time: {_time}");
         Console.WriteLine($"Event Location: {_eventLocation}");
-        Console.WriteLine($"Event Speaker: {_message}");
+        Console.WriteLine($"RSVP Email: {_message}");
     }
 
 }

@@ -14,9 +14,9 @@ class Program
         Order1.SetCustomerName("John");
         Order1.SetAddress("1234 Wave Dance", "New York", "New York", "United States");
         Order1.DisplayAddress();
-        Product Product1 = new Product("Banana", 239149, 1.53m, 5);
+        Product Product1 = new Product("zcy0 - Banana", 239149, 1.53m, 5);
         Order1.AppendProduct(Product1);
-        Product Product2 = new Product("Apple", 239150, 1.01m, 6);
+        Product Product2 = new Product("uio7 - Apple", 239150, 1.01m, 6);
         Order1.AppendProduct(Product2);
 
         Console.WriteLine("-------------------------");
@@ -32,9 +32,9 @@ class Program
         Order2.SetCustomerName("Jane");
         Order2.SetAddress("567 Tortuga", "Tokyo", "Kanto", "Japan");
         Order2.DisplayAddress();
-        Product Product3 = new Product("Orange", 269149, 6.00m, 9);
+        Product Product3 = new Product("ak2j - Orange", 269149, 6.00m, 9);
         Order2.AppendProduct(Product3);
-        Product Product4 = new Product("Grapes", 299150, 0.59m, 2);
+        Product Product4 = new Product("y955 - Grapes", 299150, 0.59m, 2);
         Order2.AppendProduct(Product4);
 
         Console.WriteLine("-------------------------");

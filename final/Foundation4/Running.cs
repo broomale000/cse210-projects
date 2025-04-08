@@ -31,6 +31,6 @@ class Running : Activity
     public override string GetSummary()
     {
         // 03 Nov 2022 Running (30 min): Distance 4.8 km, Speed: 9.6 kph, Pace: 6.25 min per km
-        return $"{_date} Running ({_duration} min): Distance {ReturnDistance():F3} km, Speed: {ReturnSpeed():F3} kph, Pace: {ReturnSpeed():F3} min per km";
+        return $"{_date} Running ({_duration} min): Distance {ReturnDistance():F2} km, Speed: {ReturnSpeed():F2} kph, Pace: {ReturnSpeed():F2} min per km";
     }
 }
